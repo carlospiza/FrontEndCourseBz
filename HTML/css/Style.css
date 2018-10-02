@@ -1,0 +1,119 @@
+:root{
+    --main-text-color: greenyellow;
+    --main-background-color: gray;
+    --main-font-family: Lucida Sans Unicode;
+    --main-font-size: 1em;
+    --main-link-color: white;
+    --main-background: darkGray;
+}
+
+@keyframes animateTitle{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+body{
+    width: 100%;
+    margin: 0;
+}
+
+*{
+    font-family: var(--main-font-family);
+}
+
+header{
+    width: 100%;
+    position: relative;
+}
+
+
+header > h1{
+    color: greenyellow;
+    background-color: black;
+    text-align: center;
+    font-size: 8em;
+    transition: color 3s;
+    animation-name: animateTitle;
+    animation-duration: 2s;
+}
+
+header > h1:hover{
+    color: yellow;
+}
+
+nav{
+    width: 100%;    
+}
+
+nav > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-background-color);
+}
+
+nav > ul > li{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-left: 1px solid var(--main-link-color);
+}
+
+nav a {
+    color: var(--main-link-color);
+    text-align: center;    
+    padding: 14px, 16px;
+
+}
+
+.dropDown{
+
+}
+
+.dropin{
+
+}
+
+.dropDownContent{
+    position: absolute;
+    min-width: 160px;
+    background-color: var(--main-background);
+    border-radius: 0 0 10px 10px;
+}
+
+.dropDownContent ul{
+    padding: 0;
+}
+
+.dropDownContent ul > li{
+    list-style-type: none;
+}
+
+h1, h2, p {
+    font-family:Lucida Sans Unicode;
+}
+
+img {
+    position: relative;
+    text-align: center;
+    align-content: center;
+    width: 80%;
+    box-shadow: 10px 10px 5px grey;
+}
+
+address {
+    text-align: center;
+}
+
+ul > li{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    text-align: justify;
+}
