@@ -14,6 +14,12 @@
 </head>
 <body>
 <header>
+    <div class="searchBox">
+        <input type="text" name="searchText" title="Buscar" placeholder="Buscar..."/>
+        <button type="button" id="btnSearch">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
 <h1>Xataka</h1>
 </header>
 <nav>
@@ -23,8 +29,8 @@
         <li class="dropDown"><a class="dropIn">Economía</a>
             <div class="dropDownContent">
                 <ul>
-                    <li><a>Internacional</a></li>
-                    <li><a>Nacional</a></li>
+                    <li><a href="#">Internacional</a></li>
+                    <li><a href="#">Nacional</a></li>
                 </ul>
             </div>
             
@@ -32,9 +38,9 @@
         <li><a href="#footerId">Cultura</a></li>
     </ul>
 </nav>
-<section>
-    <section>
-        <article id="articleId">
+<section class="container">
+    <section class="main-content">
+        <article id="articleId" class="article">
             <h2>Project Stream, la última idea de Google es jugar a 1080p y 60fps desde Chrome</h2>
             <hr>
             <p>
@@ -45,12 +51,12 @@
                 Project Stream es el último proyecto de Google que promete la posibilidad de jugar a los últimos juegos AAA en cualquier ordenador sin lag o problemas de jugabilidad. Realizarán la primera prueba con 'Assassin’s Creed Odyssey' el próximo 5 de octubre, un grupo de usuarios podrán jugar al juego desde el navegador Chrome.
             </p>
         </article>
-    </section>
-</section>
+    </section>   
+</section> 
  <aside>
-    <h2>Lo más leido</h2>
-</aside>
-<footer id="footerId">
+        <h2>Lo más leido</h2>
+    </aside>
+<footer id="footerId" class="footer">
 <p>
     Aun me acuerdo de jugar el NFS desde Streaming con Gaikai hace 7 años y iba realmente bien con Adsl, si no han evolucionado el sistema es porque no les interesa y punto.
 </p>

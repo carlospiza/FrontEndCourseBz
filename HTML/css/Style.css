@@ -5,6 +5,11 @@
     --main-font-size: 1em;
     --main-link-color: white;
     --main-background: darkGray;
+    --main-nav-shadow: rgba(0,0,0, .5);
+    --main-initial-color: rgba(61, 61, 60, .5); 
+    --main-final-color: rgba(0, 0, 0, .5); 
+    --main-hover-link-color: rgba(34, 0, 34, 0); 
+    --main-active-link-color: rgba(30, 30, 30, 0); 
 }
 
 @keyframes animateTitle{
@@ -23,6 +28,10 @@ body{
 
 *{
     font-family: var(--main-font-family);
+}
+
+*:focus {
+    outline: none;
 }
 
 header{
@@ -45,6 +54,44 @@ header > h1:hover{
     color: yellow;
 }
 
+div.searchBox {
+    float: right;
+    clear: right;
+    margin: 10px 50px;
+}
+
+div.searchBox > input[type=text]{
+    padding: 10px 5px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid var(--main-background);
+    border-right: none;
+    width: 100px;
+    margin: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+div.searchBox > input[type=text] + button{
+    color: var(--main-link-color);
+    padding: 10px 5px;
+    border-radius: 0 8px 8px 0;
+    border: 1px solid var(--main-background);
+    border-left: none;
+    margin-left: -5px;
+    background-color: var(--main-background-color);
+}
+
+div.searchBox > input[type=text]:focus{
+    width: 300px;
+
+}
+
+
+/*div.searchBox > button{
+    padding: 10px 5px;
+    border-radius: 0 8px 8px 0;
+    margin: 0;
+}*/
+
 nav{
     width: 100%;    
 }
@@ -64,56 +111,115 @@ nav > ul > li{
     border-left: 1px solid var(--main-link-color);
 }
 
+nav > ul > li > a:hover{
+    background-color: var(--main-hover-link-color);
+}
+
+nav > ul > li > a:active{
+    background-color: var(--main-active-link-color);    
+}
+
+
 nav a {
     color: var(--main-link-color);
     text-align: center;    
     padding: 14px, 16px;
+    display: inline-block;
 
 }
 
-.dropDown{
-
+li.dropDown:hover .dropDownContent {
+    display: block;
 }
 
-.dropin{
-
-}
-
-.dropDownContent{
+div.dropDownContent{
     position: absolute;
     min-width: 160px;
     background-color: var(--main-background);
     border-radius: 0 0 10px 10px;
+    box-shadow: 5px 5px 20px var(--main-nav-shadow);    
+    background: linear-gradient(to bottom, var(--main-initial-color), var(--main-final-color));
+    display: none;
 }
 
-.dropDownContent ul{
+div.dropDownContent ul{
     padding: 0;
 }
 
-.dropDownContent ul > li{
+div.dropDownContent ul > li{
     list-style-type: none;
 }
 
-h1, h2, p {
-    font-family:Lucida Sans Unicode;
+div.dropDownContent ul > li{
+    list-style-type: none;
 }
 
-img {
-    position: relative;
-    text-align: center;
+div.dropDownContent a{
+    display: inline-block;
+}
+
+section.container {
+    width: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+
+}
+
+section.main-Content {
+    width: 600px;
+    padding: 0 20px;
+    float: left;
+}
+
+.article {
+    width: 50%;
+}
+
+.article  p{
+    text-align: justify;
+}
+
+.article img {
     align-content: center;
-    width: 80%;
+    width: 300px;
+    box-shadow: 10px 10px 5px grey;
+
+}
+
+.aside {
+    float: right;
+    width: 50%;
+}
+
+.footer {
+    clear: both;
+    background-color: var(--main-background-color);
+    color: var(--main-link-color);
+    padding: 10px;
+    float: left; 
+}
+
+.footer > address {
+    float: right;
+    text-align: center;
+    color: var(--main-background);
     box-shadow: 10px 10px 5px grey;
 }
 
-address {
-    text-align: center;
-}
+@media screen and (max-width: 700px){
+    nav > ul > li{
+        display: block;
+        border-left: none;
+        border-bottom: 1px solid var(--main-link-color);
+    }
+    
+    nav a {
+        width: 100%;
+    }
 
-ul > li{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-p {
-    text-align: justify;
+    div.dropDownContent {
+        position: relative;
+        border-radius: 0;
+    }
+    
 }
