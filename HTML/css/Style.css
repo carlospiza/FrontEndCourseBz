@@ -188,7 +188,11 @@ section.main-Content {
 
 .aside {
     float: right;
-    width: 50%;
+    width: 400px;
+    margin-right:  100px;
+    box-shadow: 8px 5px 20px var(--main-nav-shadow);
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .footer {
@@ -204,6 +208,140 @@ section.main-Content {
     text-align: center;
     color: var(--main-background);
     box-shadow: 10px 10px 5px grey;
+}
+
+#main_flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column; 
+}
+
+.container > .main-content {
+    flex: 3 1 400px;
+}
+
+.container > aside {
+    flex:  1 1;
+    max-height: 500px;
+}
+
+#tabs{
+    padding: 0 20px;
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.nav-tabs{
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nav-item {
+    margin-bottom: -1px;
+}
+
+.nav-link{
+    display: block;
+    padding: 0px 16px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    color: var(--main-final-color);
+    }
+
+.nav-tabs .nav-link.active{
+    color: var(--main-text-color);
+    border-color: var(--main-background);
+    border-bottom-color: white;
+}
+
+.nav-tabs .nav-item:hover .nav-link{
+    color: var(--main-background-color);    
+    border-color: var(--main-background);
+    border-bottom-color: white;
+}
+
+
+.form-section { 
+    width: 50%; 
+    background-color: #f2f2f2; 
+    padding: 20px; 
+    border-radius: 10px; 
+    display: flex; 
+    flex-flow: column; 
+    margin-left: 20px;
+}
+
+.form-section .row { 
+    margin: 10px 0; 
+    flex: 1 1 100%; 
+    display: flex; 
+    flex-flow: column; 
+}
+
+.form-section .row label{
+    color: #333;
+    padding: 10px 0;
+}
+
+input[type=text], select, textarea, input[list]{
+    padding: 10px; 
+    border: 1px solid #CCC; 
+    border-radius: 5px; 
+}
+button[type=submit],button[type=reset]{
+    background-color: #cc6600; 
+    color: white; 
+    padding: 12px 20px; 
+    border: none;
+    margin-bottom: 5px; 
+    border-radius: 10px; 
+    background: linear-gradient(to right,rgba(35, 31 , 20,.8), rgba(116,255,51,1));
+}
+
+input:invalid{
+    border-color: red;
+}
+
+.tab-content .tab-panel{
+    display: none;
+}
+
+.tab-content .tab-panel.show{
+    display: block;
+}
+
+.table {
+    width: 50%;
+    max-width: 100%;
+    margin-bottom: 16px;
+    background-color: transparent;  
+}
+
+.table thead th{
+    vertical-align: bottom;
+    max-width: 2px solid #dee2e6;
+    padding: 16px;
+    text-align: inherit;
+}
+
+.table tbody td {
+    padding: 10px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table.table-striped tbody tr:nth-child(odd){
+    background-color: rgba(0,0,0,2);
 }
 
 @media screen and (max-width: 700px){

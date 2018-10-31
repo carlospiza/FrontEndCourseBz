@@ -1,0 +1,32 @@
+<nav>
+    <div>
+        <ol class="breadcrumb">
+        <li><a href="#">Home /</a></li>
+        <li><a href="#">Library /</a></li>
+        <li class="active">Data</li>
+        </ol>
+    </div>
+</nav>
+<script id="templateCards" type="text/reactive">
+    {{#each items}}
+        <div class="row align-items-center content-main-section">
+            <div class="col-4 content-item">
+                <div class="top-item">
+                    <p class="top-text-item>
+                        {{VolumenInfo.Title}}
+                    </p>
+                </div>
+                <img class="top-image-item" src="{{VolumenInfo.imageLinks.smallTumbnail}}" />
+                <div class="bottom-item">
+                    <p class="bottom-text-item>
+                        {{VolumenInfo.publisher}}
+                    </p>
+                    <p class="bottom-text-item>
+                        {{VolumenInfo.publisherDate}}
+                    </p>
+                    <a class="col-12" href="#/detail/{{id}}" />
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>

@@ -13,15 +13,16 @@
     <!--<script type="text/javascript" src="JS/Index.js"></script>    -->
 </head>
 <body>
-<header>
+<header id="header">
     <div class="searchBox">
-        <input type="text" name="searchText" title="Buscar" placeholder="Buscar..."/>
+        <input type="text" name="searchText" id="idSearchText" title="Buscar" placeholder="Buscar..."/>
         <button type="button" id="btnSearch">
             <i class="fa fa-search"></i>
         </button>
     </div>
 <h1>Xataka</h1>
 </header>
+<div id="main_flexs">
 <nav>
     <ul>
         <li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
@@ -51,11 +52,85 @@
                 Project Stream es el último proyecto de Google que promete la posibilidad de jugar a los últimos juegos AAA en cualquier ordenador sin lag o problemas de jugabilidad. Realizarán la primera prueba con 'Assassin’s Creed Odyssey' el próximo 5 de octubre, un grupo de usuarios podrán jugar al juego desde el navegador Chrome.
             </p>
         </article>
-    </section>   
-</section> 
- <aside>
+    </section>  
+    <aside class="aside">
         <h2>Lo más leido</h2>
+        <hr>
     </aside>
+</section>
+<section id="tabs">
+    <ul class="nav nav-tabs">
+        <li class="nav nav-item"><a class="nav-link">Contacto</a></li>
+        <li class="nav nav-item"><a class="nav-link active">Lista</a></li>
+        <li class="nav nav-item"><a class="nav-link">Otros</a></li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-panel" id="contacto">
+        <div class="form-section">
+            <form id="contactForm" novalidate>
+                <div class="row">
+                <label for="idName">Nombre</label>
+                <input name="name" type="text" id="idName" required>
+                </div>
+                <div class="row">
+                <label for="idLastName">Apellido</label>
+                <input name="lastname" type="text" id="idLastName" required>
+                </div>
+                <div class="row">
+                <label for="idEmail">Email</label>
+                <input name="email"  type="email" id="idEmail" required>
+                </div>
+                <div class="row">
+                <label for="idTypeDocument">Tipo de Documento</label>
+                <select name="document" id=”idTypeDocument” required>
+                    <option value="cc">Cédula Ciudadanía</option>
+                    <option value="ti">Tarjeta de Identidad</option>
+                    <option value="pass">Pasaporte</option>
+                </select>
+                </div>
+                <div class="row">
+                <label for="idDocument">Número</label>
+                <input name="numberId" type="text" id="idDocument" required>
+                </div>
+                <div class="row">
+                <label for="idCity">Ciudad</label>
+                <input list="browser" id=”idCity” required>
+                <datalist id="browser">
+                    <option value="Bogota">
+                    <option value="Cali">
+                    <option value="Medellin">
+                </datalist> 
+                </div>
+                <div class="row">
+                <label for="idComment">Comentarios</label>
+                <textarea cols="20" rows="10" id="idComment" ></textarea>
+                <span id="counterWords">Palabras: 0</span>
+                </div>
+                <div class="row buttons">
+                <button type="submit" >Send</button>
+                <button type="reset" >Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>  
+    <div class="tab-panel show" id="lista">
+    <table class="table table-striped" id="todo-Table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    </div>  
+    <div class="tab-panel" id="otros">Otro varios</div>  
+    </div>
+</section>
+</div>
+    <br>
 <footer id="footerId" class="footer">
 <p>
     Aun me acuerdo de jugar el NFS desde Streaming con Gaikai hace 7 años y iba realmente bien con Adsl, si no han evolucionado el sistema es porque no les interesa y punto.
@@ -66,5 +141,8 @@
     Octubre 2018
 </address>
 </footer>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>    
+<script type="text/javascript" src="JS/Index.js"></script>
+<script type="text/javascript" src="JQuery/Index.js"></script>
 </body>
 </html>
